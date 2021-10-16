@@ -40,6 +40,9 @@ jspm_packages
 __pycache__
 *.pyc
 
+# Custom Components
+custom_components/*
+
 # Other
 *.uuid
 *.conf
