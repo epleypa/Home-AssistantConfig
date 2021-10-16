@@ -43,6 +43,8 @@ __pycache__
 # Custom Components
 custom_components/*
 !custom_components/*.json
+!custom_components/camect
+!custom_components/eufy_vacuum
 
 # Other
 *.uuid
