@@ -33,9 +33,10 @@ jobs:
       - run: cp -R hacs/custom_components custom_components
       - run: git clone https://github.com/custom-components/sensor.unifigateway.git unifigateway/
       - run: cp -R unifigateway/custom_components custom_components
+      - name: Add Dummy Zones
+        run: cp ./travis/travis_zones.yaml zones.yaml
       - name: 🚀 Run Home Assistant Configuration Check
         uses: frenck/action-home-assistant@v1.1.1
         with:
           secrets: ./travis/travis_secrets.yaml
-          zones: ./travis/travis_zones.yaml
           version: "${{ matrix.version }}"
