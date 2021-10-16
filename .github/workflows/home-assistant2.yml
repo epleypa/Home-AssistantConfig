@@ -20,22 +20,22 @@ jobs:
           git clone https://github.com/custom-components/ble_monitor.git ble_monitor/
           cp -R ble_monitor/custom_components custom_components
 #          ls custom_components/ble_monitor
-#      - name: Add camect
-#        run: |
+      - name: Add camect
+        run: |
 #          git clone https://github.com/camect/home-assistant-integration.git camect/
 #          cp -R camect custom_components
-#          ls custom_components/camect
+          ls custom_components/camect
       - name: Add circadian_lighting
         run: |
           git clone https://github.com/claytonjn/hass-circadian_lighting.git circadian_lighting/
           cp -R circadian_lighting/custom_components/circadian_lighting custom_components
 #          ls custom_components/circadian_lighting
-#      - name: Add eufy_vacuum
-#        run: |
+      - name: Add eufy_vacuum
+        run: |
 #          git clone https://github.com/mitchellrj/eufy_robovac.git eufy_vacuum/
 #          cp -R eufy_vacuum/eufy_robovac custom_components
 #          mv custom_components/eufy_robovac custom_components/eufy_vacuum
-#          ls custom_components/eufy_vacuum
+          ls custom_components/eufy_vacuum
       - name: Add eventsensor
         run: |
           git clone https://github.com/azogue/eventsensor.git eventsensor/
