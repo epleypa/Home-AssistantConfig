@@ -1,6 +1,0 @@
-change_op_mode:
-  description: Change operation mode
-  fields:
-    mode:
-      description: The new operation mode.
-      example: home/away
