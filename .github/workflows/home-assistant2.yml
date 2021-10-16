@@ -28,38 +28,38 @@ jobs:
       - name: Add circadian_lighting
         run: |
           git clone https://github.com/claytonjn/hass-circadian_lighting.git circadian_lighting/
-          ls circadian_lighting/custom_components
-          cp -R circadian_lighting/custom_components custom_components
+          cp -R circadian_lighting/custom_components/circadian_lighting custom_components
 #          ls custom_components/circadian_lighting
-#      - name: Add eufy_vacuum
-#        run: |
-#          git clone https://github.com/mitchellrj/eufy_robovac.git eufy_vacuum/
-#          cp -R eufy_vacuum custom_components/eufy_vacuum
+      - name: Add eufy_vacuum
+        run: |
+          git clone https://github.com/mitchellrj/eufy_robovac.git eufy_vacuum/
+          cp -R eufy_vacuum/eufy_robovac custom_components
+          mv custom_components/eufy_robovac custom_components/eufy_vacuum
 #          ls custom_components/eufy_vacuum
       - name: Add eventsensor
         run: |
           git clone https://github.com/azogue/eventsensor.git eventsensor/
-          cp -R eventsensor/custom_components custom_components
+          cp -R eventsensor/custom_components/eventsensor custom_components
  #         ls custom_components/eventsensor
       - name: Add garbage_collection
         run: |
           git clone https://github.com/bruxy70/Garbage-Collection.git garbage_collection/
-          cp -R garbage_collection/custom_components custom_components
+          cp -R garbage_collection/custom_components/garbage_collection custom_components
 #          ls custom_components/garbage_collection
       - name: Add google_home
         run: |
           git clone https://github.com/leikoilja/ha-google-home.git google_home/
-          cp -R google_home/custom_components custom_components
+          cp -R google_home/custom_components/google_home custom_components
 #          ls custom_components/google_home
       - name: Add HACS
         run: |
           git clone https://github.com/hacs/integration.git hacs/
-          cp -R hacs/custom_components custom_components
+          cp -R hacs/custom_components/hacs custom_components
 #          ls custom_components/hacs
-#      - name: Add unifigateway
-#        run: |
-#          git clone https://github.com/custom-components/sensor.unifigateway.git unifigateway/
-#          cp -R unifigateway/custom_components custom_components
+      - name: Add unifigateway
+        run: |
+          git clone https://github.com/custom-components/sensor.unifigateway.git unifigateway/
+          cp -R unifigateway/custom_components/nifigateway custom_components
 #          ls custom_components/unifigateway
       - name: List Custom Components
         run: ls custom_components

@@ -43,8 +43,6 @@ __pycache__
 # Custom Components
 custom_components/*
 !custom_components/*.json
-!custom_components/unifigateway/*
-!custom_components/eufy_vacuum/*
 
 # Other
 *.uuid
