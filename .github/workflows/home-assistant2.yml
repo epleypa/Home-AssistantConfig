@@ -16,23 +16,23 @@ jobs:
       - name: ⤵️ Check out configuration from GitHub
         uses: actions/checkout@v2.3.4
       - run: git clone https://github.com/custom-components/ble_monitor.git ble_monitor/
-      - run: mv ble_monitor/custom_components custom_components
+      - run: mv ble_monitor/custom_components/* custom_components
       - run: git clone https://github.com/camect/home-assistant-integration.git camect/
-      - run: mv camect custom_components
+      - run: mv camect/* custom_components
       - run: git clone https://github.com/custom-components/circadian_lighting.git circadian_lighting/
-      - run: mv circadian_lighting/custom_components custom_components
+      - run: mv circadian_lighting/custom_components/* custom_components
       - run: git clone https://github.com/custom-components/eufy_vacuum.git eufy_vacuum/
-      - run: mv eufy_vacuum/custom_components custom_components
+      - run: mv eufy_vacuum/custom_components/* custom_components
       - run: git clone https://github.com/custom-components/eventsensor.git eventsensor/
-      - run: mv eventsensor/custom_components custom_components
+      - run: mv eventsensor/custom_components/* custom_components
       - run: git clone https://github.com/custom-components/garbage_collection.git garbage_collection/
-      - run: mv garbage_collection/custom_components custom_components
+      - run: mv garbage_collection/custom_components/* custom_components
       - run: git clone https://github.com/custom-components/google_home.git google_home/
-      - run: mv google_home/custom_components custom_components
+      - run: mv google_home/custom_components/* custom_components
       - run: git clone https://github.com/hacs/integration.git hacs/
-      - run: mv hacs/custom_components custom_components
+      - run: mv hacs/custom_components/* custom_components
       - run: git clone https://github.com/custom-components/unifigateway.git unifigateway/
-      - run: mv unifigateway/custom_components custom_components
+      - run: mv unifigateway/custom_components/* custom_components
       - name: 🚀 Run Home Assistant Configuration Check
         uses: frenck/action-home-assistant@v1.1.1
         with:
