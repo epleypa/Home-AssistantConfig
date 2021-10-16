@@ -35,6 +35,8 @@ jobs:
       - run: cp -R unifigateway/custom_components custom_components
       - name: List Custom Components
         run: ls custom_components
+      - run: ls custom_components/eufy_vacuum
+      - run: ls custom_components/unifigateway
       - name: Add Dummy Zones
         run: cp ./travis/travis_zones.yaml zones.yaml
       - name: 🚀 Run Home Assistant Configuration Check
