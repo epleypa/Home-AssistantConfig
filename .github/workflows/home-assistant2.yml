@@ -30,7 +30,8 @@ jobs:
         run: |
           git clone https://github.com/claytonjn/hass-circadian_lighting.git circadian_lighting/
           ls circadian_lighting/custom_components
-          cp -R circadian_lighting/custom_components custom_components/circadian_lighting
+          cp -R circadian_lighting/custom_components custom_components
+          sleep 20
           ls custom_components/circadian_lighting
       - name: Add eufy_vacuum
         run: |
@@ -41,6 +42,7 @@ jobs:
         run: |
           git clone https://github.com/azogue/eventsensor.git eventsensor/
           cp -R eventsensor/custom_components custom_components
+          sleep 20
           ls custom_components/eventsensor
       - name: Add garbage_collection
         run: |
