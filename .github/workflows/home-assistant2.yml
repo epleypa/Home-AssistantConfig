@@ -59,7 +59,7 @@ jobs:
       - name: Add unifigateway
         run: |
           git clone https://github.com/custom-components/sensor.unifigateway.git unifigateway/
-          cp -R unifigateway/custom_components/nifigateway custom_components
+          cp -R unifigateway/custom_components/unifigateway custom_components
 #          ls custom_components/unifigateway
       - name: List Custom Components
         run: ls custom_components
