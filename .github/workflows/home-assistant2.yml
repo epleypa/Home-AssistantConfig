@@ -22,7 +22,7 @@ jobs:
       - run: git clone https://github.com/claytonjn/hass-circadian_lighting.git circadian_lighting/
       - run: cp -R circadian_lighting/custom_components custom_components
       - run: git clone https://github.com/mitchellrj/eufy_robovac.git eufy_vacuum/
-      - run: cp -R eufy_vacuum custom_components
+      - run: cp -R eufy_vacuum custom_components/eufy_vacuum
       - run: git clone https://github.com/azogue/eventsensor.git eventsensor/
       - run: cp -R eventsensor/custom_components custom_components
       - run: git clone https://github.com/bruxy70/Garbage-Collection.git garbage_collection/
@@ -32,7 +32,7 @@ jobs:
       - run: git clone https://github.com/hacs/integration.git hacs/
       - run: cp -R hacs/custom_components custom_components
       - run: git clone https://github.com/custom-components/sensor.unifigateway.git unifigateway/
-      - run: cp -R unifigateway/custom_components custom_components
+      - run: cp -R sensor.unifigateway/custom_components custom_components
       - name: Add Dummy Zones
         run: cp ./travis/travis_zones.yaml zones.yaml
       - name: 🚀 Run Home Assistant Configuration Check
