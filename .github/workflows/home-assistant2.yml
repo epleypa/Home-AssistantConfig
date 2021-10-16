@@ -29,9 +29,10 @@ jobs:
           ls custom_components/camect
       - name: Add circadian_lighting
         run: |
-          git clone https://github.com/claytonjn/hass-circadian_lighting.git circadian_lighting/
-          cp -R circadian_lighting/custom_components custom_components
-          wait
+          git clone https://github.com/claytonjn/hass-circadian_lighting.git circadian_lighting/ & process_id=$!
+          wait $process_id
+          cp -R circadian_lighting/custom_components custom_components & process_id=$!
+          wait $process_id
           ls custom_components/circadian_lighting
       - name: Add eufy_vacuum
         run: |
