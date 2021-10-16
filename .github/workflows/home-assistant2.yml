@@ -33,6 +33,8 @@ jobs:
       - run: cp -R hacs/custom_components custom_components
       - run: git clone https://github.com/custom-components/sensor.unifigateway.git unifigateway/
       - run: cp -R unifigateway/custom_components custom_components
+      - name: List Custom Components
+        run: ls custom_components
       - name: Add Dummy Zones
         run: cp ./travis/travis_zones.yaml zones.yaml
       - name: 🚀 Run Home Assistant Configuration Check
