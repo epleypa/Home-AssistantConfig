@@ -692,16 +692,18 @@
   action:
   - choose:
     - conditions:
-      - condition: sun
-        after: sunrise
+      - condition: trigger
+        id: sunrise
       sequence: []
     - conditions:
-      - condition: sun
-        after: sunset
+      - condition: trigger
+        id: sunset
       sequence:
       - service: homeassistant.turn_on
         target:
-          entity_id: group.holiday_lights
+          entity_id:
+          - group.holiday_lights
+          - light.tv_backlight
     - conditions:
       - condition: time
         after: '23:00:00'
@@ -711,7 +713,9 @@
       sequence:
       - service: homeassistant.turn_off
         target:
-          entity_id: group.holiday_lights
+          entity_id:
+          - group.holiday_lights
+          - light.tv_backlight
     default: []
   - choose:
     - conditions:
@@ -722,10 +726,8 @@
           state: home
       - condition: time
         before: '23:00:00'
-      - condition: not
-        conditions:
-        - condition: trigger
-          id: sunrise
+      - condition: trigger
+        id: sunset
       sequence:
       - delay: 00:{{ '{:02}'.format(range(0,30) | random | int) }}:00
       - service: homeassistant.turn_on
